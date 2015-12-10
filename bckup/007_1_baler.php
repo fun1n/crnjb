@@ -1,12 +1,11 @@
-#!/usr/bin/php
 <?php
 include('databaseconn.php');
     set_time_limit(300);//for setting 
-    $path='/davao';
-    $ftp_server='ftp.meteopilipinas.gov.ph';
+    $path='/nsrc/baler';
+    $ftp_server='192.168.30.192';
     $ftp_server_port="21";
-    $ftp_user_name='solarad';
-    $ftp_user_pass='4r4w2015';
+    $ftp_user_name='archiver';
+    $ftp_user_pass='archiver';
 
     // set up a connection to ftp server
     $conn_id = ftp_connect($ftp_server, $ftp_server_port); 
@@ -37,7 +36,7 @@ include('databaseconn.php');
 		if (mysqli_num_rows($result1) > 0) {
    				 while($row = mysqli_fetch_assoc($result1)) {
   			//echo "file name: ".$row["tblftpfile"]." is existing. <br />";
-            echo "Baler: list updated.\n";
+            echo "baler: list updated.\n";
 		}
   }
   else{
@@ -46,7 +45,7 @@ VALUES ('', '0007', '".$path."','".$value."','".$res."','0')";
 
 if (mysqli_query($conn, $sql)) {
     //echo $value." recorded successfully<br />";
-    echo "Baler: record success.\n";
+    echo "baler: record success.\n";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
