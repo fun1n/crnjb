@@ -86,10 +86,10 @@ while(! feof($handle))
 
 							$slrMaxUvTmp = $findata;		
 							}
-										else if($cnt2==9){
+								//		else if($cnt2==9){
 
 							//$slrBatt = $findata;		
-							}
+							//}
 										else if($cnt2==9){
 
 							$slrAvgRad = $findata;		
