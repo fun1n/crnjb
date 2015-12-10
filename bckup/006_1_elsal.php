@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 include('databaseconn.php');
     set_time_limit(300);//for setting 

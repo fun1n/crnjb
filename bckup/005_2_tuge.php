@@ -1,5 +1,6 @@
+#!/usr/bin/php
 <?php
-ini_set('max_execution_time', 3000);
+ini_set('max_execution_time', 7000);
 try{
 include('databaseconn.php');
 $slrDate =0;
@@ -26,7 +27,7 @@ $sql1 = "SELECT * FROM tblftpfilenames WHERE FileState=0 AND tblAreaID=0005";
   			//echo "file name: ".$row["tblftpfile"]." is being opened. <br />";
 
 
-$filename = 'ftp://archiver:archiver@192.168.30.192/nsrc'.$row["tblftpfile"];
+$filename = 'ftp://archiver:archiver@192.168.30.192'.$row["tblftpfile"];
  			
 if ( file_exists($filename) && ($fp = fopen($filename, "r"))!==false ) {
 
